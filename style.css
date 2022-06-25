@@ -1,0 +1,293 @@
+﻿:root {
+    --color-bg: white;
+    --color-text-main: #000000;
+    --color-primary: black;
+    --wrapper-height: 87vh;
+    --image-max-width: 300px;
+    --image-margin: 3rem;
+    --font-family: "HK Grotesk";
+    --font-family-header: "HK Grotesk";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+    font-family: HK Grotesk;
+    src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027") format("opentype");
+}
+
+@font-face {
+    font-family: HK Grotesk;
+    font-weight: bold;
+    src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437") format("opentype");
+}
+
+#header {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    background: white;
+}
+
+#wishlist {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+#menu-footer-bottom {
+}
+
+.vertical-align-container {
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    height: 100%;
+    /*justify-content: space-between;*/
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.centre {
+    width: 122px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+}
+
+.right {
+    flex: 1;
+}
+
+.left {
+    flex: 1;
+}
+
+.icon-wrapper {
+    height: 100%;
+    display: flex;
+}
+
+.wishlist-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wishlist-inner {
+    vertical-align: baseline;
+    display: flex;
+}
+
+.icon {
+    height: 100%;
+}
+
+.main-content {
+    flex: 2;
+    min-height: 50vh;
+}
+
+.contact {
+    max-width: 30%;
+}
+
+.contact-title {
+    padding: 100px 0 10px;
+}
+
+.contact-text {
+    text-align: left;
+    margin-bottom: -8px;
+    margin-top: -27px;
+    font-size: 18px;
+}
+
+.collection {
+    max-width: 30%;
+    font-size: 18px;
+    text-align: right;
+}
+
+.collection-title {
+    padding: 100px 0 10px;
+}
+
+.footer-wrapper {
+    margin: 0px 5%;
+    padding: 76px 0 129px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-under {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+.brand-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    padding: 23px 0px;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.dropdown:hover + .dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover {
+    display: block;
+}
+
+.nested-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 50px;
+    background-color: #000000;
+    min-width: 160px;
+    padding: 23px 0px;
+    z-index: 1;
+}
+
+.nested:hover .nested-content {
+    display: block;
+}
+
+.footer-under ul {
+    padding: 0;
+    margin: 5px 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+body {
+    background: gray;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    background: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a {
+    color: white;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-inline-start: 0;
+    margin: 0;
+}
+
+nav > ul > li > a {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav > ul > li > a > span {
+    text-decoration: none;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), linear-gradient(#000000, #ffffff);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s linear;
+}
+
+    nav > ul > li > a > span:hover {
+        background-size: 0 2px, 100% 2px;
+    }
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        color: #dddddd;
+    }
